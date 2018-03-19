@@ -144,11 +144,10 @@ Pour l'installer, rendez-vous sur la page suivante :
 
 https://github.com/jlord/git-it-electron/releases/latest
 
-Télécharger le fichier **"Git-it-Linux-x64.zip"** , le décompacter dans votre répertoire `net-home` et lancer l'exécutable `Git-it`.
+Télécharger le fichier **"Git-it-Linux-x64.zip"** , le décompacter dans votre répertoire `$HOME` et lancer l'exécutable `Git-it`.
 
 Ceci peut aussi se faire en ligne de commande de la manière suivante : 
 ```sh
-cd ~/net-home/
 curl -sOL $(curl -s https://api.github.com/repos/jlord/git-it-electron/releases/latest| \
 grep -e "\"browser_download_url\": \".*Git-it-Linux-x64.zip\""| \
 sed "s/\"browser_download_url\": \"\(.*Git-it-Linux-x64.zip\)\"/\1/")
@@ -164,7 +163,7 @@ Si disponible à l'instant où vous faites le TP, passez l'interface en Françai
 Histoire de visualiser plus facilement sur quelle branche vous êtes, modifiez votre prompt bash afin qu'il affiche la
 branche courante.
 
-Éditez le fichier `~/net-home/.bash_profile` (ou `~/.bash_profile`) et ajoutez les lignes suivantes:
+Éditez le fichier `~/.bash_profile` et ajoutez les lignes suivantes:
 
 ```sh
 parse_git_dirty (){
@@ -194,7 +193,7 @@ PS1="$PS1\$ "
 Tapez `source ~/.bash_profile` pour charger la nouvelle configuration. Votre prompt devrait ressembler à cela:
 
 ```sh
-~/net-home/tpIHM/tp1 (master)$
+~/tpIHM/tp1 (master)$
 ```
 
 S'il y a des modifications pas encore versionnées, le nom de la branche courante sera suivi du caractère '*'.
