@@ -142,7 +142,7 @@ au moment de vos TP.
 
 Pour l'installer, rendez-vous sur la page suivante : 
 
-https://github.com/jlord/git-it-electron/releases/latest
+https://github.com/IUTInfoAix-M2105/git-it-electron/releases/latest
 
 Télécharger le fichier **"Git-it-Linux-x64.zip"** , le décompacter dans votre répertoire `$HOME` et lancer l'exécutable `Git-it`.
 
