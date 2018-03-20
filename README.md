@@ -146,17 +146,10 @@ https://github.com/jlord/git-it-electron/releases/latest
 
 Télécharger le fichier **"Git-it-Linux-x64.zip"** , le décompacter dans votre répertoire `$HOME` et lancer l'exécutable `Git-it`.
 
-Ceci peut aussi se faire en ligne de commande de la manière suivante : 
-```sh
-curl -sOL $(curl -s https://api.github.com/repos/jlord/git-it-electron/releases/latest| \
-grep -e "\"browser_download_url\": \".*Git-it-Linux-x64.zip\""| \
-sed "s/\"browser_download_url\": \"\(.*Git-it-Linux-x64.zip\)\"/\1/")
-unzip Git-it-Linux-x64.zip
-Git-it-Linux-x64/Git-it
-```
-
 Si disponible à l'instant où vous faites le TP, passez l'interface en Français en cliquant en haut à gauche. La première 
 étape du tutoriel peut être passée car vous l'avez déjà réalisée dans la précédente étape du TP.
+
+Une fois le tutoriel terminé, prennez une capture d'écran de la page web intégrant votre contribution et l'envoyer à votre enseignant.
 
 #### Visualiser la branche courante
 
@@ -167,24 +160,14 @@ branche courante.
 
 ```sh
 parse_git_dirty (){
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-```
-ou
-```sh
-parse_git_dirty (){
   [[ $(git status 2> /dev/null | tail -n1) != "rien à valider, la copie de travail est propre" ]] && echo "*"
 }
-```
-selon la langue utilisée, puis :
 
-```sh
 parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/^..\(.*\)/(\1$(parse_git_dirty))/"
 }
 
 # Prompt simple pour afficher la branche git courante
-#PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]"
 PS1="\[\033[01;34m\]\w\[\033[00m\]" 
 PS1="$PS1 \[\033[01;31m\]\$(parse_git_branch)\[\033[00m\]"
 PS1="$PS1\$ "
@@ -193,7 +176,7 @@ PS1="$PS1\$ "
 Tapez `source ~/.bash_profile` pour charger la nouvelle configuration. Votre prompt devrait ressembler à cela:
 
 ```sh
-~/tpIHM/tp1 (master)$
+~/helloworld (master)$
 ```
 
-S'il y a des modifications pas encore versionnées, le nom de la branche courante sera suivi du caractère '*'.
+S'il y a des modifications pas encore versionnées, le nom de la branche courante sera suivi du caractère `*`.
