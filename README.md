@@ -184,8 +184,7 @@ S'il y a des modifications pas encore versionnées, le nom de la branche courant
 ### Création de votre fork du TP1
 Maintenant que vous connaissez les bases de Git, vous allez pouvoir commencer à travailler sur vos TP. Comme vous allez le découvrir le rendu, l'évaluation et le suivi de votre travail passeront par GitHub. La première chose que vous allez donc faire est de créer un fork d'un dépôt. Pour ce faire, rendez-vous sur le lien suivant :
 
-https://classroom.github.com/a/NJ6QYeBI
-
+https://classroom.github.com/a/7Xb-uLIM
 GitHub va vous créer un dépôt contenant un fork du dépôt 'IUTInfoAix-m2103/tp1' et s'appellant 'IUTInfoAix-m2103/tp1-votreUsername'. Vous apparaîtrez automatiquement comme contributeur de ce projet pour y pousser votre travail. Sachez qu'un robot récupérera automatiquement votre code après chaque push pour vérifier que les tests passent et calculer en même temps votre taux d'accomplissement du TP.
 
 ### À faire pour chaque exercice 
